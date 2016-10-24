@@ -1,0 +1,3 @@
+#!/bin/bash
+(cd /proc; ls -d [0-9]* ) | while read pid; do set -- /proc/$pid/fd/*; echo $pid $#; done
+ps axo "pid" 
